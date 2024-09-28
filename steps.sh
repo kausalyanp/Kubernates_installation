@@ -7,10 +7,19 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt-get update
 sudo apt-get install -y docker-ce
 
-#install kubectl
 
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+#Ensure that curl is also installed:
+sudo apt-get update && sudo apt-get install curl -y
+
+#Install VirtualBox (if not already installed)
+sudo apt-get update
+sudo apt-get install conntrack -y
+sudo apt-get install curl wget apt-transport-https -y
+sudo apt-get install virtualbox virtualbox-ext-pack -y
+
+#install kubectl
+sudo apt-get update 
+sudo apt-get install -y kubectl
 
 <<COMMENT
 
