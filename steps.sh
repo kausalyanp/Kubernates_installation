@@ -19,7 +19,7 @@ sudo apt-get install virtualbox virtualbox-ext-pack -y
 
 #install kubectl
 sudo apt-get update 
-sudo apt-get install -y kubectl
+sudo apt-get install kubectl -y
 
 <<COMMENT
 
