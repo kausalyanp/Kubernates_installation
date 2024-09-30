@@ -18,10 +18,6 @@ sudo apt-get install curl wget apt-transport-https -y
 sudo apt-get install virtualbox virtualbox-ext-pack -y
 
 #install kubectl
-sudo apt-get update 
-sudo apt-get install kubectl -y
-
-<<COMMENT
 
 sudo apt-get update
 # apt-transport-https may be a dummy package; if so, you can skip that package
@@ -38,7 +34,6 @@ sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list   # helps tools such as c
 sudo apt-get update
 sudo apt-get install -y kubectl
 
-COMMENT
 
 # install minikube
 
