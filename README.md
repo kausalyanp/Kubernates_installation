@@ -1,5 +1,5 @@
 # Kubernates_installation
-install docker, minikube, microk8s
+Steps to install docker, minikube, microk8s
 
 Docker installation
 
