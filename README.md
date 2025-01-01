@@ -31,7 +31,7 @@ sudo apt-get update
 
 # Install Latest docker and docker packages
 
-$ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 ```
 
@@ -84,3 +84,5 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
 minikube start --driver=docker
 ```
+
+>>  Created By Kausalya N P
