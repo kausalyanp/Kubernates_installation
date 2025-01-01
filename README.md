@@ -32,7 +32,6 @@ sudo apt-get update
 # Install Latest docker and docker packages
 
 sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
 ```
 
 ### Ensure that curl is also installed:
@@ -47,6 +46,7 @@ sudo apt-get install conntrack -y
 sudo apt-get install curl wget apt-transport-https -y
 sudo apt-get install virtualbox virtualbox-ext-pack -y
 ```
+Press on right arrow key then enter to accept the acknowledgement
 
 ### Install kubectl
 (create a file kube.sh and then enter below code and install the kubectl on ubuntu)
@@ -73,16 +73,35 @@ sudo apt-get update
 sudo apt-get install -y kubectl
 ```
 
-
 ### Install minikube
 ```
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 ```
+Check the minikube version and if docker ir running:
+```
+minikube version
+docker --version
+```
 
-### Once all dependencies are installed, you can start Minikube. Ensure Docker is running, and then start Minikube:
+### Add the Ubuntu permission to docker group, since the minikube does not run on root user.
+```
+sudo usermod -aG docker $USER && newgrp docker
+echo $USER
+```
+
+### Once all dependencies are installed, you can start Minikube.Start Minikube:
 ```
 minikube start --driver=docker
 ```
-
+## Note:
+1. Try running commands to check the nodes.
+   ```
+   kubectl get nodes
+   ```
+2. Check minikube status:
+   ```
+   minikube status
+   ```
+   
 >>  Created By Kausalya N P
