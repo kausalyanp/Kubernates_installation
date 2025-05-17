@@ -11,7 +11,7 @@ Requirement:
 (create a file.sh enter below code there and install the docker on Ubuntu)
 
 ```
-#!/bin/bash 
+#!/bin/bash
 
 # Update the server and add the Docker official gpg keys:
 
